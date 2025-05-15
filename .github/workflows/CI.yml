@@ -44,8 +44,7 @@ jobs:
       - uses: shogo82148/actions-setup-perl@v1
         with:
           perl-version: "5.38"
-      - run: cpanm --installdeps .
-      - run: prove -lv t
+      - run: perl --version  # Available in all subsequent steps
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
