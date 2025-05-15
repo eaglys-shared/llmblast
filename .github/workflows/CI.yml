@@ -42,9 +42,9 @@ jobs:
         with:
           python-version: 3.x
       - name: Install perl
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y perl
+        uses: shogo82148/actions-setup-perl@v1
+        with:
+          perl-version: "5.38"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
